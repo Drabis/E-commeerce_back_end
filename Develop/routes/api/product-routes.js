@@ -5,10 +5,11 @@ const { Product, Category, Tag, ProductTag } = require("../../models");
 
 // get all products
 router.get("/", async (req, res) => {
+  console.log("here");
   // find all products
   try {
     const productData = await Product.findAll({
-      include: [{ mdoel: Category }, { model: Tag, through: ProductTag }],
+      include: [{ model: Category }, { model: Tag, through: ProductTag }],
     });
     res.status(200).json(productData);
   } catch (err) {
@@ -29,19 +30,18 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// create new product
 router.post("/", async (req, res) => {
-  try {
-    const newProduct = await Product.create({
-      product_name: req.body.product_name,
-      price: req.body.price,
-      stock: req.body.stock,
-      tagIds: req.body.tagIds,
-    });
-    res.status(200).json(newProduct);
-  } catch (err) {
-    res.status(400).json(err);
-  }
+  console.log("here");
+  console.log(req.body);
+
+  // try {
+  //   const newProduct = await Product.create(req.body);
+  //   console.log(newProduct);
+  //   res.status(200).json(newProduct);
+  // } catch (err) {
+  //   console.log(err);
+  //   res.status(400).json(err);
+  // }
   Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
