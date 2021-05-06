@@ -1,3 +1,4 @@
+
 # Back end e-commerce
 
 # Table of contents
@@ -10,6 +11,12 @@
 - [License](#license)
 
 ## Description
+
+<img width="1171" alt="Screen Shot 2021-05-05 at 11 24 57 PM" src="https://user-images.githubusercontent.com/76567790/117237652-66e9ea80-adf9-11eb-9f3b-d43c0e60c5e4.png">
+
+<img width="1181" alt="Screen Shot 2021-05-05 at 11 24 36 PM" src="https://user-images.githubusercontent.com/76567790/117237704-7d904180-adf9-11eb-8796-c49ebef4f3a8.png">
+
+<img width="1184" alt="Screen Shot 2021-05-05 at 11 23 58 PM" src="https://user-images.githubusercontent.com/76567790/117237716-81bc5f00-adf9-11eb-8b34-fb485750ec93.png">
 
 This project aims to create the back end of an e-commerce website with Express.js API by using sequelize to interact with a MySQL database. It contain three routes: products, tags, and categories; offering the user to perform CRUD operations on each one. 
 
